@@ -91,12 +91,12 @@ function App() {
     TweenMax.to(title, .5, { y: 30, opacity: "0" });
 
 
-    for (i = 0; i < 18; i++) {
+    for (i = 0; i < card2.length; i++) {
 
       TweenMax.to(card2[i], .5, { opacity: ".2" });
     }
 
-    for (i = 0; i < 20; i++) {
+    for (i = 0; i < card1.length; i++) {
       card1[i].className = card1[i].className.replace(" uk-animation-slide-bottom", "");
       TweenMax.to(card1[i], .5, { y: 500 });
     }
@@ -110,12 +110,12 @@ function App() {
       title.className += " uk-animation-fade";
       TweenMax.to(title, .1, { y: 0, opacity: "1" });
 
-      for (i = 0; i < 18; i++) {
+      for (i = 0; i <  card2.length; i++) {
 
         TweenMax.to(card2[i], .1, { opacity: "1" });
       }
 
-      for (i = 0; i < 20; i++) {
+      for (i = 0; i < card1.length; i++) {
         card1[i].className += " uk-animation-slide-bottom";
         TweenMax.to(card1[i], .1, { y: 0 });
 
@@ -150,12 +150,12 @@ function App() {
     title.className = title.className.replace(" uk-animation-slide-bottom-medium", "");
     title.className = title.className.replace(" uk-animation-fade", "");
     TweenMax.to(title, .5, { y: 30, opacity: "0" });
-    for (i = 0; i < 18; i++) {
+    for (i = 0; i < card2.length; i++) {
 
       TweenMax.to(card2[i], .5, { opacity: ".2" });
     }
 
-    for (i = 0; i < 20; i++) {
+    for (i = 0; i < card1.length; i++) {
       card1[i].className = card1[i].className.replace(" uk-animation-slide-bottom", "");
       TweenMax.to(card1[i], .5, { y: 500 });
     }
@@ -170,11 +170,11 @@ function App() {
       title.className += " uk-animation-slide-bottom-medium";
       title.className += " uk-animation-fade";
       TweenMax.to(title, .1, { y: 0, opacity: "1" });
-      for (i = 0; i < 18; i++) {
+      for (i = 0; i < card2.length; i++) {
 
         TweenMax.to(card2[i], .1, { opacity: "1" });
       }
-      for (i = 0; i < 20; i++) {
+      for (i = 0; i < card1.length; i++) {
         card1[i].className += " uk-animation-slide-bottom";
         TweenMax.to(card1[i], .1, { y: 0 });
 
@@ -269,12 +269,12 @@ function App() {
 
           </div>
 
-          <div id="container" onMouseMove={(e) => parallaxIt(e, '.particle', -200)} class="mySlides ">
+          <div id="container" class="mySlides ">
 
             <Services></Services>
-            <a class="prev" uk-slideshow-item="previous" onClick={(e) => { animonarrow(0, -1); scroll() }}><span uk-icon="icon: triangle-left ; ratio: 2"></span></a>
+            <a class="prev" uk-slideshow-item="previous" onMouseMove={(e) => parallaxIt(e, '.particle', -200)} onClick={(e) => { animonarrow(0, -1); scroll() }}><span uk-icon="icon: triangle-left ; ratio: 2"></span></a>
             <div class="txt2 uk-visible@l"  >H O M E </div>
-            <a class="next" uk-slideshow-item="next" onClick={(e) => { animonarrow(0, 1); scroll() }}><span uk-icon="icon: triangle-right ; ratio: 2"></span></a>
+            <a class="next" uk-slideshow-item="next" onMouseMove={(e) => parallaxIt(e, '.particle', -200)} onClick={(e) => { animonarrow(0, 1); scroll() }}><span uk-icon="icon: triangle-right ; ratio: 2"></span></a>
             <div className="txt uk-visible@l">P R O J E C T S</div>
 
 
